@@ -309,70 +309,6 @@ footer{background:#0a0a0a;padding:1.75rem 5vw;display:flex;justify-content:space
   .score-box{border-right:none;border-bottom:var(--border);}
   .score-box:last-child{border-bottom:none;}
 }
-
-/* PROJECT EXPAND/COLLAPSE */
-.projects-hidden { display: none; }
-.projects-hidden.expanded { display: contents; }
-.expand-row {
-  border: var(--border);
-  margin: -1px 0 0 -1px;
-  padding: 0;
-  display: flex;
-  align-items: stretch;
-  grid-column: 1 / -1;
-}
-.expand-btn {
-  width: 100%;
-  padding: 1.1rem 2.25rem;
-  background: var(--grey-faint);
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  transition: background var(--transition);
-}
-.expand-btn:hover { background: var(--accent-light); }
-.expand-btn svg { width: 16px; height: 16px; stroke: var(--accent); fill: none; stroke-width: 2; transition: transform 0.3s ease; flex-shrink: 0; }
-.expand-btn.open svg { transform: rotate(180deg); }
-.expand-btn .expand-count { margin-left: auto; font-size: 0.7rem; color: var(--grey-mid); font-weight: 400; letter-spacing: 0.04em; text-transform: none; }
-
-/* PROJECT TOGGLE */
-.project-card.hidden-project { display: none; }
-.project-card.hidden-project.revealed { display: flex; }
-.projects-toggle-wrap {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: center;
-  padding: 1.5rem 0 0.5rem;
-  border-top: var(--border);
-  margin: -1px 0 0 -1px;
-}
-.projects-toggle-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  padding: 0.85rem 2.25rem;
-  border: 1px solid var(--accent);
-  background: var(--white);
-  color: var(--accent);
-  font-family: var(--sans);
-  font-size: 0.74rem;
-  font-weight: 500;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background var(--transition), color var(--transition);
-}
-.projects-toggle-btn:hover { background: var(--accent); color: var(--white); }
-.projects-toggle-btn svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; transition: transform 0.3s ease; }
-.projects-toggle-btn.open svg { transform: rotate(180deg); }
 </style>
 </head>
 <body>
@@ -456,7 +392,23 @@ footer{background:#0a0a0a;padding:1.75rem 5vw;display:flex;justify-content:space
     <div class="exp-item">
       <div><span class="exp-period">May 2024 – Jul 2024</span><span class="exp-type">Operations / Supply Chain</span></div>
       <div class="exp-details">
-        <h3>Management Intern</h3><span class="exp-company">Ste<div class="projects-grid">
+        <h3>Management Intern</h3><span class="exp-company">Stellar Commercial Vehicles Pvt Ltd</span>
+        <ul>
+          <li>Supported end-to-end supply chain coordination between sales and backend operations, improving workflow visibility and continuity.</li>
+          <li>Analysed sales and procurement data to identify demand trends, improving forecasting accuracy and enabling better operational planning.</li>
+          <li>Assisted in monitoring inventory movement and stock alignment, ensuring supply-demand balance across the distribution chain.</li>
+          <li>Collaborated with internal stakeholders to streamline workflows, reduce process inefficiencies, and enhance operational throughput.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-label">Projects &amp; Case Competitions</div>
+  <h2 class="section-title">Academic Case<br>Portfolio</h2>
+  <p class="projects-intro">Supply chain, strategy, sustainability, and research projects — built on consulting methodology, systems thinking, and data-driven decision-making.</p>
+  <div class="projects-grid">
 
     <div class="project-card">
       <div class="project-card-body">
@@ -501,16 +453,7 @@ footer{background:#0a0a0a;padding:1.75rem 5vw;display:flex;justify-content:space
       </div>
     </div>
 
-    <div class="expand-row" id="expand-row">
-      <button class="expand-btn" id="expand-btn" onclick="toggleProjects()">
-        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        Show 2 More Projects
-        <span class="expand-count">Social Media Research &amp; Zomato Analysis</span>
-      </button>
-    </div>
-
-    <div class="projects-hidden" id="projects-hidden">
-    <div class="project-card hidden-project" id="proj-4">
+    <div class="project-card">
       <div class="project-card-body">
         <div class="project-card-top"><div class="project-num">04</div><span class="project-badge">Research</span></div>
         <h3>Impact of Social Media on Youth</h3>
@@ -521,29 +464,13 @@ footer{background:#0a0a0a;padding:1.75rem 5vw;display:flex;justify-content:space
       </div>
     </div>
 
-    <div class="project-card hidden-project" id="proj-5">
+    <div class="project-card">
       <div class="project-card-body">
         <div class="project-card-top"><div class="project-num">05</div><span class="project-badge">Special Study</span></div>
         <h3>Zomato Ltd — Special Studies Report</h3>
         <p class="project-desc">Company analysis of Zomato Ltd — business model, supply chain logistics, financial performance, and competitive positioning in food-tech.</p>
         <div><span class="project-row-label">Focus Areas</span><p class="project-row-text">Analysed last-mile delivery supply chain, logistics network, and procurement operations. Benchmarked against Swiggy and global food-tech players.</p></div>
         <div class="tools-row"><span class="tool-tag">Company Analysis</span><span class="tool-tag">Supply Chain Logistics</span><span class="tool-tag">Financial Analysis</span><span class="tool-tag">Competitive Analysis</span></div>
-        <a href="https://drive.google.com/file/d/1ta_sFQoTJRvAtpW88DNZO-nk5UpW_-uo/view?usp=sharing" target="_blank" class="project-link"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>View Report</a>
-      </div>
-    </div>
-
-    <div class="upload-card hidden-project" id="proj-6">
-      <div class="upload-card-num">— 06 —</div>
-      <div class="upload-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
-      <h3>Your Next Project</h3>
-      <p>SKEMA M2 coursework, case competition, or independent research.</p>
-      <span class="upload-placeholder-tag">Coming Soon</span>
-    </div>
-
-  </div>
-    </div>
-
-  </div>g">Company Analysis</span><span class="tool-tag">Supply Chain Logistics</span><span class="tool-tag">Financial Analysis</span><span class="tool-tag">Competitive Analysis</span></div>
         <a href="https://drive.google.com/file/d/1ta_sFQoTJRvAtpW88DNZO-nk5UpW_-uo/view?usp=sharing" target="_blank" class="project-link"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>View Report</a>
       </div>
     </div>
@@ -767,7 +694,7 @@ To every MiM student feeling confused right now — that confusion isn't weaknes
   <h2 class="section-title">Let's Connect</h2>
   <p class="contact-subtext">My CV is available for full details on my experience, projects, and academic background. I am actively seeking internship opportunities in supply chain consulting and operations globally.</p>
   <div class="contact-buttons">
-    <a href="https://drive.google.com/file/d/1LXcxOSw3A3Qf4hXoLQMSykhND5_S3DiX/view?usp=sharing" target="_blank" class="btn-white"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download CV</a>
+    <a href="#" class="btn-white"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download CV</a>
     <a href="mailto:Aarkdhwanit.oza@skema.edu" class="btn-ghost-white"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email Me</a>
     <a href="https://www.linkedin.com/in/aarkoza" target="_blank" class="btn-ghost-white"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>View LinkedIn</a>
   </div>
@@ -787,41 +714,6 @@ To every MiM student feeling confused right now — that confusion isn't weaknes
   window.addEventListener("scroll", () => {
     nav.style.boxShadow = window.scrollY > 10 ? "0 2px 20px rgba(0,0,0,0.07)" : "none";
   });
-
-function toggleProjects() {
-  const hidden = document.getElementById('projects-hidden');
-  const btn = document.getElementById('expand-btn');
-  const isOpen = hidden.classList.contains('expanded');
-  if (isOpen) {
-    hidden.classList.remove('expanded');
-    btn.classList.remove('open');
-    btn.innerHTML = '<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>Show 2 More Projects<span class="expand-count">Social Media Research &amp; Zomato Analysis</span>';
-    btn.onclick = toggleProjects;
-    document.getElementById('expand-row').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  } else {
-    hidden.classList.add('expanded');
-    btn.classList.add('open');
-    btn.innerHTML = '<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>Show Less<span class="expand-count">Collapse additional projects</span>';
-    btn.onclick = toggleProjects;
-  }
-}
-  function toggleProjects() {
-    const btn = document.getElementById('projects-toggle-btn');
-    const label = document.getElementById('toggle-label');
-    const hidden = document.querySelectorAll('.hidden-project');
-    const isOpen = btn.classList.contains('open');
-    if (isOpen) {
-      hidden.forEach(el => el.classList.remove('revealed'));
-      label.textContent = 'Show All Projects';
-      btn.classList.remove('open');
-      document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      hidden.forEach(el => el.classList.add('revealed'));
-      label.textContent = 'Show Less';
-      btn.classList.add('open');
-    }
-  }
-
 </script>
 </body>
 </html>
